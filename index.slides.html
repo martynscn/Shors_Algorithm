@@ -9,14 +9,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Qsphere_plots slides</title>
+<title>index slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,14 +24,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        link.href = 'reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -13202,7 +13202,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Shor's-Algorithm-in-Quantum-Cryptography">Shor's Algorithm in Quantum Cryptography<a class="anchor-link" href="#Shor's-Algorithm-in-Quantum-Cryptography">&#182;</a></h1><h2 id="Brno-University-of-Technology">Brno University of Technology<a class="anchor-link" href="#Brno-University-of-Technology">&#182;</a></h2><h3 id="Martyns-Nwaokocha">Martyns Nwaokocha<a class="anchor-link" href="#Martyns-Nwaokocha">&#182;</a></h3><h4 id="-"> <a class="anchor-link" href="#-">&#182;</a></h4>
+<h1 id="Shor's-Algorithm-in-Quantum-Cryptography">Shor's Algorithm in Quantum Cryptography<a class="anchor-link" href="#Shor's-Algorithm-in-Quantum-Cryptography">&#182;</a></h1><h2 id="Brno-University-of-Technology">Brno University of Technology<a class="anchor-link" href="#Brno-University-of-Technology">&#182;</a></h2><h3 id="Martyns-Nwaokocha">Martyns Nwaokocha<a class="anchor-link" href="#Martyns-Nwaokocha">&#182;</a></h3><h4 id="10-November,-2020">10 November, 2020<a class="anchor-link" href="#10-November,-2020">&#182;</a></h4>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13398,8 +13398,8 @@ require(
       waitSeconds: 15
     },
     [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+      "reveal.js/lib/js/head.min.js",
+      "reveal.js/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -13414,9 +13414,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
+                { src: "reveal.js/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
+                { src: "reveal.js/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
