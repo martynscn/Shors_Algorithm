@@ -13202,7 +13202,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Shor's-Algorithm-in-Quantum-Cryptography">Shor's Algorithm in Quantum Cryptography<a class="anchor-link" href="#Shor's-Algorithm-in-Quantum-Cryptography">&#182;</a></h1><h2 id="Brno-University-of-Technology">Brno University of Technology<a class="anchor-link" href="#Brno-University-of-Technology">&#182;</a></h2><h3 id="Martyns-Nwaokocha">Martyns Nwaokocha<a class="anchor-link" href="#Martyns-Nwaokocha">&#182;</a></h3><h4 id="10-November,-2020">10 November, 2020<a class="anchor-link" href="#10-November,-2020">&#182;</a></h4>
+<h1 id="Shor's-Algorithm-in-Quantum-Cryptography">Shor's Algorithm in Quantum Cryptography<a class="anchor-link" href="#Shor's-Algorithm-in-Quantum-Cryptography">&#182;</a></h1><h2 id="Brno-University-of-Technology">Brno University of Technology<a class="anchor-link" href="#Brno-University-of-Technology">&#182;</a></h2><h3 id="Martyns-Nwaokocha">Martyns Nwaokocha<a class="anchor-link" href="#Martyns-Nwaokocha">&#182;</a></h3><h5 id="Supervised-by-Prof.-Jaroslav-Hrdina">Supervised by Prof. Jaroslav Hrdina<a class="anchor-link" href="#Supervised-by-Prof.-Jaroslav-Hrdina">&#182;</a></h5><h5 id="11-November,-2020">11 November, 2020<a class="anchor-link" href="#11-November,-2020">&#182;</a></h5>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13213,13 +13213,19 @@ a.anchor-link {
     <b>CONTENT</b>
 </div><ol>
 <li>History of Quantum Cryptography</li>
+<li>Goal of the project</li>
 <li>Introduction to Quantum Computing<ol>
-<li>Qubits &amp; Gates</li>
+<li>Qubits</li>
+<li>Gates</li>
+<li>Quantum circuits &amp; programs</li>
 <li>Quantum Fourier Transform</li>
+<li>Quantum Phase Estimation</li>
 </ol>
 </li>
 <li>Shor's algorithm &amp; circuit</li>
-<li>Simulating between Classical &amp; Quantum Computing</li>
+<li>Simulation</li>
+<li>Next steps</li>
+<li>Questions</li>
 </ol>
 
 </div>
@@ -13238,7 +13244,27 @@ a.anchor-link {
 </ol>
 </li>
 <li>It started from Stephen Wiesner and Gilles Brassard who worked on <em>Conjugate Coding</em> and later proposed a method for secure communication</li>
+<li>Quantum cryptography relies on Quantum computing which began in early 1980s by Paul Benioff, Richard Feynman and Yuri Manin</li>
 <li>Shor's algorithm was invented in 1994 by Peter Shor for finding the prime factors of a number.</li>
+</ol>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class = "alert alert-block alert-info">
+    <b>Goal of the project</b>
+</div><ol>
+<li>Explore the mathematics in Introductory quantum computing</li>
+<li>Understand the implementation of Shor's algorithm</li>
+<li>Implement some quantum cryptography scheme based on Shor's algorithm such as<ol>
+<li>finding the multiplicative order of an integer modulo another integer</li>
+<li>factoring an integer</li>
+</ol>
+</li>
+<li>Run simulations</li>
 </ol>
 
 </div>
@@ -13320,7 +13346,7 @@ $$</li>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_bloch_vector_spherical</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span> <span class="c1"># Bloch Vector with spherical coordinates</span>
@@ -13336,7 +13362,7 @@ $$</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -13402,7 +13428,7 @@ into its prime factors will take a supercomputer 2700 core-years to yield</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>As examples for searching an unstructured data, Grover's algorithm reduces the complexity from $O(N)$ in classical algorithms to $O(N^{1/2})$</li>
-<li>For factoring a N digit number, Shor's algorithm reduces the complexity from $O(e^{cN^{1/3}{log(N)}^{2/3}})$ in the best known classical algorithms to $O(N^2log(N)log(log(N)))$ which is a little faster than $O(N^3)$</li>
+<li>For factoring a N digit number, Shor's algorithm reduces the complexity from $$O(e^{cN^{1/3}{log(N)}^{2/3}})$$ in the best known classical algorithms to $$O(N^2log(N)log(log(N)))$$ which is a little faster than $O(N^3)$</li>
 <li>Thus Shor's algorithm gives us exponential speedup</li>
 </ul>
 
@@ -13461,6 +13487,7 @@ $$
 $$<ul>
 <li>Having n qubits implies keeping track of $2^n$ complex amplitudes</li>
 <li>While a modern computer can simulate a general quantum state of $\approx 20$ qubits, simulating 100 qubits is very difficult for the largest supercomputers</li>
+<li>A visual representation of a 4 qubit state is shown on the <strong>Q sphere</strong> below</li>
 </ul>
 
 </div>
@@ -13468,7 +13495,7 @@ $$<ul>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -13492,7 +13519,7 @@ $$<ul>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -13564,7 +13591,7 @@ $$
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">qc_cnot</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -13582,7 +13609,7 @@ $$
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt output_prompt">Out[60]:</div>
 
 
 
@@ -13667,7 +13694,7 @@ $$<p></p>
 <li><strong>Initialization and reset:</strong> resets can be performed by a combination of single-qubit gates and concurrent real-time classical computation</li>
 <li><strong>Quantum gates:</strong> a sequence of quantum gates that manipulate the qubits (in this case 3) as required by the algorithm. Here only a single single-qubit Hadamard ($H$) and two-qubit Controlled-X ($\oplus$) gates were applied.</li>
 <li><strong>Measurements:</strong> A classical computer interprets the measurements of each qubit as classical outcomes (0 and 1) and stores them in the two classical bits</li>
-<li><strong>Classically conditioned quantum gates:</strong></li>
+<li><strong>Classically conditioned quantum gates</strong></li>
 </ul>
 
 </div>
@@ -13751,7 +13778,7 @@ $$H = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Circuit that Implements the QFT</b>
+    <b>Circuit that Implements the QFT 1/2</b>
 </div><ul>
 <li><p>The circuit makes use of two gates namely:</p>
 <ul>
@@ -13779,7 +13806,7 @@ UROT_k = \left[\begin{matrix}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Circuit that Implements the QFT 2/</b>
+    <b>Circuit that Implements the QFT 2/2</b>
 </div><ul>
 <li>The action of $CROT_k$ on the two-qubit state $\vert x_jx_k\rangle$ where the first qubit is the control and the second is the target is given by</li>
 </ul>
@@ -13796,7 +13823,7 @@ $$CROT_k\vert 1x_j\rangle = \exp\left( \frac{2\pi i}{2^k}x_j \right)\vert 1x_j\r
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Quantum Phase Estimation</b>
+    <b>Quantum Phase Estimation 1/2</b>
 </div><ul>
 <li>Given a unitary operator $U$, the algorithm estimates $\theta$ in $U\vert\psi \rangle =e^{\boldsymbol{2\pi i} \theta }|\psi \rangle$. </li>
 <li>Here $|\psi\rangle$ is an eigenvector and $e^{\boldsymbol{2\pi i}\theta}$ is the corresponding eigenvalue. </li>
@@ -13812,7 +13839,7 @@ $$CROT_k\vert 1x_j\rangle = \exp\left( \frac{2\pi i}{2^k}x_j \right)\vert 1x_j\r
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Quantum Phase Estimation 2/</b>
+    <b>Quantum Phase Estimation 2/2</b>
 </div><ul>
 <li>This circuit estimates the phase of a unitary operator $U$.</li>
 <li>It estimates $\theta$ in $U\vert\psi \rangle =e^{\boldsymbol{2\pi i} \theta }|\psi \rangle$, where $|\psi\rangle$ is an eigenvector and $e^{\boldsymbol{2\pi i}\theta}$ is the corresponding eigenvalue</li>
@@ -13842,8 +13869,30 @@ $$ |\psi_4\rangle = | 2^n \theta \rangle \otimes | \psi \rangle$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Shor's Algorithm</b>
-</div>
+    <b>Factoring algorithms for RSA</b>
+</div><ul>
+<li>RSA which is the widely used cryptosystem, relies on factoring being impossible for large enough integers.</li>
+<li>Old classical factoring algorithms include:<ul>
+<li>Trial division</li>
+<li>p − 1 method</li>
+<li>p + 1 method</li>
+<li>Pollard rho method</li>
+</ul>
+</li>
+<li>Modern classical factoring algorithms include:<ul>
+<li>Continued Fraction Method (CFRAC)</li>
+<li>Quadratic Sieve (QS)</li>
+<li>Elliptic Curve Method (ECM)</li>
+<li>Number Field Sieve (NFS).</li>
+</ul>
+</li>
+<li>Modern factoring algorithms lie somewhere between polynomial and exponential time, in an area called sub-exponential time</li>
+<li>Shor’s algorithm is famous for factoring integers in polynomial time</li>
+<li>The quantum part of Shor's algorithm actually solves the problem of <strong>period finding</strong></li>
+<li>A factoring problem can be turned into a period finding problem in polynomial time</li>
+<li>If we can compute the period of $a^x\bmod N$ efficiently, then we can also efficiently factor it</li>
+</ul>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -13851,41 +13900,22 @@ $$ |\psi_4\rangle = | 2^n \theta \rangle \otimes | \psi \rangle$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Shor's Algorithm</b>
-</div><p>Shor’s algorithm is famous for factoring integers in polynomial time. Since the best-known classical algorithm requires superpolynomial time to factor the product of two primes, the widely used cryptosystem, RSA, relies on factoring being impossible for large enough integers.</p>
-<p>In this chapter we will focus on the quantum part of Shor’s algorithm, which actually solves the problem of <em>period finding</em>. Since a factoring problem can be turned into a period finding problem in polynomial time, an efficient period finding algorithm can be used to factor integers efficiently too. For now its enough to show that if we can compute the period of $a^x\bmod N$ efficiently, then we can also efficiently factor. Since period finding is a worthy problem in its own right, we will first solve this, then discuss how this can be used to factor in section 5.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.-The-Problem:-Period-Finding">1. The Problem: Period Finding<a class="anchor-link" href="#1.-The-Problem:-Period-Finding">&#182;</a></h2><p>looking at the periodic function:</p>
-$$ f(x) = a^x \bmod{N}$$<details>
-    <summary>Reminder: Modulo &amp; Modular Arithmetic (Click here to expand)</summary>
-
-The modulo operation (abbreviated to 'mod') simply means to find the remainder when dividing one number by another. For example:
-
-$$ 17 \bmod 5 = 2 $$
-
-Since $17 \div 5 = 3$ with remainder $2$. (i.e. $17 = (3\times 5) + 2$). In Python, the modulo operation is denoted through the <code>%</code> symbol.
-
-This behaviour is used in <a href="https://en.wikipedia.org/wiki/Modular_arithmetic">modular arithmetic</a>, where numbers 'wrap round' after reaching a certain value (the modulus). Using modular arithmetic, we could write:
-
-$$ 17 = 2 \pmod 5$$
-
-Note that here the $\pmod 5$ applies to the entire equation (since it is in parenthesis), unlike the equation above where it only applied to the left-hand side of the equation.
-</details><p>where $a$ and $N$ are positive integers, $a$ is less than $N$, and they have no common factors. The period, or order ($r$), is the smallest (non-zero) integer such that:</p>
+    <b>Period Finding</b>
+</div><ul>
+<li>Considering the periodic function:</li>
+</ul>
+$$ f(x) = a^x \bmod{N}$$<p>where $a$ and $N$ are positive integers, $a$ is less than $N$, and they have no common factors. The period, or order ($r$), is the smallest (non-zero) integer such that:</p>
 $$a^r \bmod N = 1 $$<p></p>
-<p>We can see an example of this function plotted on the graph below. Note that the lines between points are to help see the periodicity and do not represent the intermediate values between the x-markers.</p>
+<ul>
+<li>An example is plotted below</li>
+</ul>
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">35</span>
@@ -13905,7 +13935,7 @@ $$a^r \bmod N = 1 $$<p></p>
     <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;&lt;-&gt;&#39;</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;$r=</span><span class="si">%i</span><span class="s1">$&#39;</span> <span class="o">%</span> <span class="n">r</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mf">1.5</span><span class="p">))</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Could not find period, check a &lt; N and have no common factors.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13922,7 +13952,7 @@ $$a^r \bmod N = 1 $$<p></p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Could not find period, check a &lt; N and have no common factors.
+<pre>
 </pre>
 </div>
 </div>
@@ -13950,9 +13980,17 @@ $$a^r \bmod N = 1 $$<p></p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Shor's Algorithm</b>
-</div><h2 id="2.-The-Solution">2. The Solution<a class="anchor-link" href="#2.-The-Solution">&#182;</a></h2><p>Shor’s solution was to use <a href="./quantum-phase-estimation.html">quantum phase estimation</a> on the unitary operator:</p>
-$$ U|y\rangle \equiv |ay \bmod N \rangle $$<p>To see how this is helpful, let’s work out what an eigenstate of U might look like. If we started in the state $|1\rangle$, we can see that each successive application of U will multiply the state of our register by $a \pmod N$, and after $r$ applications we will arrive at the state $|1\rangle$ again. For example with $a = 3$ and $N = 35$:</p>
+    <b>Shor's Algorithm solution</b>
+</div><ul>
+<li>Shor’s algorithm uses quantum phase estimation on the unitary operator:</li>
+</ul>
+$$ U|y\rangle \equiv |ay \bmod N \rangle $$<ul>
+<li>For example, working out the eigenstate of U might look like the following:<ul>
+<li>Starting in state $|1\rangle$, each successive application of U will multiply the state of the register by $a \pmod N$</li>
+<li>after $r$ applications the state $|1\rangle$ is gotten again. For example with $a = 3$ and $N = 35$:</li>
+</ul>
+</li>
+</ul>
 $$\begin{aligned}
 U|1\rangle &amp;= |3\rangle &amp; \\
 U^2|1\rangle &amp;= |9\rangle \\
@@ -13963,10 +14001,10 @@ U^r|1\rangle &amp;= |1\rangle
 \end{aligned}$$
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Number of applications of U&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;End state of register&#39;</span><span class="p">,</span>
@@ -13984,7 +14022,7 @@ U^r|1\rangle &amp;= |1\rangle
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[63]:</div>
 
 
 
@@ -14005,84 +14043,24 @@ U^r|1\rangle &amp;= |1\rangle
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class = "alert alert-block alert-info">
-    <b>Shor's Algorithm</b>
-</div><h2 id="2.-The-Solution">2. The Solution<a class="anchor-link" href="#2.-The-Solution">&#182;</a></h2><p>So a superposition of the states in this cycle ($|u_0\rangle$) would be an eigenstate of $U$:</p>
-$$|u_0\rangle = \tfrac{1}{\sqrt{r}}\sum_{k=0}^{r-1}{|a^k \bmod N\rangle} $$<details>
-    <summary>Click to Expand: Example with $a = 3$ and $N=35$</summary>
-
-$$\begin{aligned}
-|u_0\rangle &= \tfrac{1}{\sqrt{12}}(|1\rangle + |3\rangle + |9\rangle \dots + |4\rangle + |12\rangle) \\[10pt]
-U|u_0\rangle &= \tfrac{1}{\sqrt{12}}(U|1\rangle + U|3\rangle + U|9\rangle \dots + U|4\rangle + U|12\rangle) \\[10pt]
- &= \tfrac{1}{\sqrt{12}}(|3\rangle + |9\rangle + |27\rangle \dots + |12\rangle + |1\rangle) \\[10pt]
- &= |u_0\rangle
-\end{aligned}$$
-</details><p>This eigenstate has an eigenvalue of 1, which isn’t very interesting. A more interesting eigenstate could be one in which the phase is different for each of these computational basis states. Specifically, let’s look at the case in which the phase of the $k$th state is proportional to $k$:</p>
+    <b>Shor's Algorithm solution</b>
+</div><ul>
+<li>So a superposition of the states in this cycle ($|u_0\rangle$) would be an eigenstate of $U$:</li>
+</ul>
+$$|u_0\rangle = \tfrac{1}{\sqrt{r}}\sum_{k=0}^{r-1}{|a^k \bmod N\rangle} $$<ul>
+<li>If the phase of the $k$th state is proportional to $k$:, we have</li>
+</ul>
 $$\begin{aligned}
 |u_1\rangle &amp;= \tfrac{1}{\sqrt{r}}\sum_{k=0}^{r-1}{e^{-\tfrac{2\pi i k}{r}}|a^k \bmod N\rangle}\\[10pt]
 U|u_1\rangle &amp;= e^{\tfrac{2\pi i}{r}}|u_1\rangle 
 \end{aligned}
-$$<details>
-    <summary>Click to Expand: Example with $a = 3$ and $N=35$</summary>
-
-$$\begin{aligned}
-|u_1\rangle &= \tfrac{1}{\sqrt{12}}(|1\rangle + e^{-\tfrac{2\pi i}{12}}|3\rangle + e^{-\tfrac{4\pi i}{12}}|9\rangle \dots + e^{-\tfrac{20\pi i}{12}}|4\rangle + e^{-\tfrac{22\pi i}{12}}|12\rangle) \\[10pt]
-U|u_1\rangle &= \tfrac{1}{\sqrt{12}}(|3\rangle + e^{-\tfrac{2\pi i}{12}}|9\rangle + e^{-\tfrac{4\pi i}{12}}|27\rangle \dots + e^{-\tfrac{20\pi i}{12}}|12\rangle + e^{-\tfrac{22\pi i}{12}}|1\rangle) \\[10pt]
-U|u_1\rangle &= e^{\tfrac{2\pi i}{12}}\cdot\tfrac{1}{\sqrt{12}}(e^{\tfrac{-2\pi i}{12}}|3\rangle + e^{-\tfrac{4\pi i}{12}}|9\rangle + e^{-\tfrac{6\pi i}{12}}|27\rangle \dots + e^{-\tfrac{22\pi i}{12}}|12\rangle + e^{-\tfrac{24\pi i}{12}}|1\rangle) \\[10pt]
-U|u_1\rangle &= e^{\tfrac{2\pi i}{12}}|u_1\rangle
-\end{aligned}$$
-
-(We can see $r = 12$ appears in the denominator of the phase.)
-</details><p>This is a particularly interesting eigenvalue as it contains $r$. In fact, $r$ has to be included to make sure the phase differences between the $r$ computational basis states are equal. This is not the only eigenstate with this behaviour; to generalise this further, we can multiply an integer, $s$, to this phase difference, which will show up in our eigenvalue:</p>
-$$\begin{aligned}
-|u_s\rangle &amp;= \tfrac{1}{\sqrt{r}}\sum_{k=0}^{r-1}{e^{-\tfrac{2\pi i s k}{r}}|a^k \bmod N\rangle}\\[10pt]
-U|u_s\rangle &amp;= e^{\tfrac{2\pi i s}{r}}|u_s\rangle 
-\end{aligned}
-$$<details>
-    <summary>Click to Expand: Example with $a = 3$ and $N=35$</summary>
-
-$$\begin{aligned}
-|u_s\rangle &= \tfrac{1}{\sqrt{12}}(|1\rangle + e^{-\tfrac{2\pi i s}{12}}|3\rangle + e^{-\tfrac{4\pi i s}{12}}|9\rangle \dots + e^{-\tfrac{20\pi i s}{12}}|4\rangle + e^{-\tfrac{22\pi i s}{12}}|12\rangle) \\[10pt]
-U|u_s\rangle &= \tfrac{1}{\sqrt{12}}(|3\rangle + e^{-\tfrac{2\pi i s}{12}}|9\rangle + e^{-\tfrac{4\pi i s}{12}}|27\rangle \dots + e^{-\tfrac{20\pi i s}{12}}|12\rangle + e^{-\tfrac{22\pi i s}{12}}|1\rangle) \\[10pt]
-U|u_s\rangle &= e^{\tfrac{2\pi i s}{12}}\cdot\tfrac{1}{\sqrt{12}}(e^{-\tfrac{2\pi i s}{12}}|3\rangle + e^{-\tfrac{4\pi i s}{12}}|9\rangle + e^{-\tfrac{6\pi i s}{12}}|27\rangle \dots + e^{-\tfrac{22\pi i s}{12}}|12\rangle + e^{-\tfrac{24\pi i s}{12}}|1\rangle) \\[10pt]
-U|u_s\rangle &= e^{\tfrac{2\pi i s}{12}}|u_s\rangle
-\end{aligned}$$
-
-</details><p>We now have a unique eigenstate for each integer value of $s$ where $$0 \leq s \leq r-1$$. Very conveniently, if we sum up all these eigenstates, the different phases cancel out all computational basis states except $|1\rangle$:</p>
-$$ \tfrac{1}{\sqrt{r}}\sum_{s=0}^{r-1} |u_s\rangle = |1\rangle$$<details>
-    <summary>Click to Expand: Example with $a = 7$ and $N=15$</summary>
-
-For this, we will look at a smaller example where $a = 7$ and $N=15$. In this case $r=4$:
-
-$$\begin{aligned}
-\tfrac{1}{2}(\quad|u_0\rangle &= \tfrac{1}{2}(|1\rangle \hphantom{e^{-\tfrac{2\pi i}{12}}}+ |7\rangle \hphantom{e^{-\tfrac{12\pi i}{12}}} + |4\rangle \hphantom{e^{-\tfrac{12\pi i}{12}}} + |13\rangle)\dots \\[10pt]
-+ |u_1\rangle &= \tfrac{1}{2}(|1\rangle + e^{-\tfrac{2\pi i}{4}}|7\rangle + e^{-\tfrac{\hphantom{1}4\pi i}{4}}|4\rangle + e^{-\tfrac{\hphantom{1}6\pi i}{4}}|13\rangle)\dots \\[10pt]
-+ |u_2\rangle &= \tfrac{1}{2}(|1\rangle + e^{-\tfrac{4\pi i}{4}}|7\rangle + e^{-\tfrac{\hphantom{1}8\pi i}{4}}|4\rangle + e^{-\tfrac{12\pi i}{4}}|13\rangle)\dots \\[10pt]
-+ |u_3\rangle &= \tfrac{1}{2}(|1\rangle + e^{-\tfrac{6\pi i}{4}}|7\rangle + e^{-\tfrac{12\pi i}{4}}|4\rangle + e^{-\tfrac{18\pi i}{4}}|13\rangle)\quad) = |1\rangle \\[10pt]
-\end{aligned}$$
-
-</details><p>Since the computational basis state $|1\rangle$ is a superposition of these eigenstates, which means if we do QPE on $U$ using the state $|1\rangle$, we will measure a phase:</p>
-$$\phi = \frac{s}{r}$$<p>Where $s$ is a random integer between $0$ and $r-1$. We finally use the <a href="https://en.wikipedia.org/wiki/Continued_fraction">continued fractions</a> algorithm on $\phi$ to find $r$. The circuit diagram looks like this (note that this diagram uses Qiskit's qubit ordering convention):</p>
-<p><img src="images/shor_circuit_1.svg"></p>
-<p>We will next demonstrate Shor’s algorithm using Qiskit’s simulators. For this demonstration we will provide the circuits for $U$ without explanation, but in section 4 we will discuss how circuits for $U^{2^j}$ can be constructed efficiently.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class = "alert alert-block alert-info">
-    <b>Shor's Algorithm</b>
-</div><h2 id="4.-Modular-Exponentiation">4. Modular Exponentiation<a class="anchor-link" href="#4.-Modular-Exponentiation">&#182;</a></h2><p>You may have noticed that the method of creating the $U^{2^j}$ gates by repeating $U$ grows exponentially with $j$ and will not result in a polynomial time algorithm. We want a way to create the operator:</p>
-$$ U^{2^j}|y\rangle = |a^{2^j}y \bmod N \rangle $$<p>that grows polynomially with $j$. Fortunately, calculating:</p>
-$$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an algorithm known as <em>repeated squaring</em> to calculate an exponential. In our case, since we are only dealing with exponentials of the form $2^j$, the repeated squaring algorithm becomes very simple:</p>
-
+$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">a2jmodN</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
@@ -14099,7 +14077,7 @@ $$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a2jmodN</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2049</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
@@ -14115,7 +14093,7 @@ $$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[65]:</div>
 
 
 
@@ -14129,23 +14107,10 @@ $$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an a
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class = "alert alert-block alert-info">
-    <b>Shor's Algorithm</b>
-</div><p>If an efficient algorithm is possible in Python, then we can use the same algorithm on a quantum computer. Unfortunately, despite scaling polynomially with $j$, modular exponentiation circuits are not straightforward and are the bottleneck in Shor’s algorithm. A beginner-friendly implementation can be found in reference [1].</p>
-<h2 id="5.-Factoring-from-Period-Finding">5. Factoring from Period Finding<a class="anchor-link" href="#5.-Factoring-from-Period-Finding">&#182;</a></h2><p>Not all factoring problems are difficult; we can spot an even number instantly and know that one of its factors is 2. In fact, there are <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf#%5B%7B%22num%22%3A127%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C70%2C223%2C0%5D">specific criteria</a> for choosing numbers that are difficult to factor, but the basic idea is to choose the product of two large prime numbers.</p>
-<p>A general factoring algorithm will first check to see if there is a shortcut to factoring the integer (is the number even? Is the number of the form $N = a^b$?), before using Shor’s period finding for the worst-case scenario. Since we aim to focus on the quantum part of the algorithm, we will jump straight to the case in which N is the product of two primes.</p>
-<h3 id="Example:-Factoring-15">Example: Factoring 15<a class="anchor-link" href="#Example:-Factoring-15">&#182;</a></h3><p>To see an example of factoring on a small number of qubits, we will factor 15, which we all know is the product of the not-so-large prime numbers 3 and 5.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">15</span>
@@ -14156,17 +14121,9 @@ $$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an a
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The first step is to choose a random number, $x$, between $1$ and $N-1$:</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># This is to make sure we get reproduceable results</span>
@@ -14197,17 +14154,9 @@ $$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an a
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Next we quickly check it isn't already a non-trivial factor of $N$:</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span> <span class="c1"># greatest common divisor</span>
@@ -14224,7 +14173,7 @@ $$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an a
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[68]:</div>
 
 
 
@@ -14239,18 +14188,9 @@ $$ a^{2^j} \bmod N$$<p>efficiently is possible. Classical computers can use an a
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Great. Next, we do Shor's order finding algorithm for <code>a = 7</code> and <code>N = 15</code>. Remember that the phase we measure will be $s/r$ where:</p>
-$$ a^r \bmod N = 1 $$<p>and $s$ is a random integer between 0 and $r-1$.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">qpe_amod15</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
@@ -14304,6 +14244,20 @@ $$ a^r \bmod N = 1 $$<p>and $s$ is a random integer between 0 and $r-1$.</p>
 <li>After the simulating it on IBM's Quantum simulator, my expected result was accurately measured. All other states had 0 probability.</li>
 </ul>
 <p><img src="images/run_with_a_Quantum_simulator.png" alt="Drawing" style="width: 500px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class = "alert alert-block alert-info">
+    <b>References</b>
+</div><ul>
+<li>Learn Quantum Computation Using Qiskit, Abraham Asfaw, 2020.</li>
+<li>MATHEMATICAL ESSENTIALS OF QUANTUM COMPUTING, JUANJO RUE AND SEBASTIAN XAMBO</li>
+<li>Quantum computation and quantum information, Cambridge press, Michael Nielsen and Isaac Chuang</li>
+</ul>
 
 </div>
 </div>
